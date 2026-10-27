@@ -10,23 +10,15 @@ import SwiftData
 
 @main
 struct practice_swiftApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SwiftDataView()
         }
-        .modelContainer(sharedModelContainer)
+        .modelContainer(for: Destination.self)
+        /*
+         .modelContainer modifier this tells swift data we want to create the stroage for
+         this destination object or load it if it was created seperately and then use that storage for
+         all the data inside our whole window group which for us as entire app.
+         */
     }
 }
