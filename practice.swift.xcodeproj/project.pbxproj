@@ -6,6 +6,10 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9A544BB43087789C00E338BE /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9A544BB33087789C00E338BE /* KeychainSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		9A4216E4308370FF004FF873 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -51,6 +55,7 @@
 		9A4216D1308370FC004FF873 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				9A544BB43087789C00E338BE /* KeychainSwift in Frameworks */,
 			);
 		};
 		9A4216E0308370FF004FF873 /* Frameworks */ = {
@@ -103,6 +108,9 @@
 				9A4216D6308370FC004FF873 /* practice.swift */,
 			);
 			name = practice.swift;
+			packageProductDependencies = (
+				9A544BB33087789C00E338BE /* KeychainSwift */,
+			);
 			productName = practice.swift;
 			productReference = 9A4216D4308370FC004FF873 /* practice.swift.app */;
 			productType = "com.apple.product-type.application";
@@ -157,7 +165,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2700;
-				LastUpgradeCheck = 2700;
+				LastUpgradeCheck = 2710;
 				TargetAttributes = {
 					9A4216D3308370FC004FF873 = {
 						CreatedOnToolsVersion = 27.0;
@@ -181,6 +189,9 @@
 			);
 			mainGroup = 9A4216CB308370FC004FF873;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				9A544BB23087789C00E338BE /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9A4216D5308370FC004FF873 /* Products */;
 			projectDirPath = "";
@@ -302,6 +313,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -359,6 +371,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -548,6 +561,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9A544BB23087789C00E338BE /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 24.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9A544BB33087789C00E338BE /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A544BB23087789C00E338BE /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9A4216CC308370FC004FF873 /* Project object */;
 	validationLevel = 1;
